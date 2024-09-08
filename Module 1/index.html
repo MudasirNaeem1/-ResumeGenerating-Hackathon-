@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Static Resume Builder</h1>
+
+        <!-- GUI Interface for User Input -->
+        <div class="form-container">
+            <form id="resumeForm">
+                <!-- Personal Information Section -->
+                <div class="section">
+                    <h2>Personal Information</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="CNIC">CNIC:</label>
+                    <input type="text" id="CNIC" name="CNIC" placeholder="Your CNIC without dash (-)" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" placeholder="Your Phone Number (start with 03*********)" required>                    
+
+                    <label for="profilePicture">Profile Picture (URL):</label>
+                    <input type="text" id="profilePicture" name="profilePicture" placeholder="Profile Picture URL">
+                </div>
+
+                <!-- Education Section -->
+                <div class="section">
+                    <h2>Education</h2>
+                    <textarea id="education" name="education" placeholder="Your Education" required></textarea>
+                </div>
+
+                <!-- Work Experience Section -->
+                <div class="section">
+                    <h2>Work Experience</h2>
+                    <textarea id="experience" name="experience" placeholder="Your Work Experience" required></textarea>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="section">
+                    <h2>Skills</h2>
+                    <input type="text" id="skills" name="skills" placeholder="Your Skills (comma separated)" required>
+                </div>
+
+                <!-- Achievements Section -->
+                <div class="section">
+                    <h2>Achievements</h2>
+                    <textarea id="achievements" name="achievements" placeholder="Your Achievements"></textarea>
+                </div>
+
+                <!-- Generate Resume Button -->
+                <button type="button" id="generateResumeButton">Generate Resume</button>
+            </form>
+        </div>
+
+        <!-- Placeholder for the generated resume -->
+        <section id="generatedResume"></section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
